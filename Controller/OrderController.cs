@@ -2,7 +2,7 @@
 
 namespace RestauranteApp.Controller
 {
-    public class OrderController
+    public class OrderController:ControllerBase
 
     {
        
