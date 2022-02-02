@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RestauranteApp
 {
-    internal interface IQueueOrganization
+    public interface IQueueOrganization
     {
         Queue FilaDeEntradas { get; set; }
         Queue FilaDeAcompanhamentos { get; set; }

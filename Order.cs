@@ -9,6 +9,7 @@ namespace RestauranteApp
     public class Order
     {
         public int Items { get; set; }
+        public string ItemsName { get; set; }
         
         public int NumberItems { get; set; }
     }
