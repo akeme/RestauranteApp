@@ -8,7 +8,7 @@ namespace RestauranteApp.Controller
        
         private Dictionary<string, Item> _catalogo;
 
-        private readonly IQueueOrganization _queueOganization;
+        private IQueueOrganization _queueOganization;
 
         public void OrdemController(IQueueOrganization queueOganization)
         {
