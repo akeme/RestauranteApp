@@ -19,6 +19,6 @@ namespace RestauranteApp
         Queue FilaDeMassas { get; set; }
         Queue FilaDeSaladas { get; set; }
 
-        void AdicionarNaFila(Item item);
+        void QueueAdd(Item item);
     }
 }
