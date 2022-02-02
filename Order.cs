@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace RestauranteApp
 {
-    internal class Order
+    public class Order
     {
         public int Items { get; set; }
         
-        public int QtdItems { get; set; }
+        public int NumberItems { get; set; }
     }
 }
