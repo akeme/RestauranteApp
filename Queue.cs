@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace RestauranteApp
 {
-    internal class Queue
+    public class Queue
     {
+        public string Nome { get; set; }
+        public IList<Item> Itens { get; set; }
+
+        public Queue(string nome)
+        {
+            Nome = nome;
+            Itens = new List<Item>();
+        }
     }
 }
