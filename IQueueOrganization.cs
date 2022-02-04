@@ -8,16 +8,16 @@ namespace RestauranteApp
 {
     public interface IQueueOrganization
     {
-        Queue FilaDeEntradas { get; set; }
-        Queue FilaDeAcompanhamentos { get; set; }
+        Queue QueueOfFries { get; set; }
+        Queue QueueOfGarnish { get; set; }
 
-        Queue FilaDeSobremesas { get; set; }
+        Queue QueueOfDesert { get; set; }
 
-        Queue FilaDeBebidas { get; set; }
+        Queue QueueOfDrink { get; set; }
 
-        Queue FilaDeCarnes { get; set; }
-        Queue FilaDeMassas { get; set; }
-        Queue FilaDeSaladas { get; set; }
+        Queue QueueOfGrill { get; set; }
+        Queue QueueOfPasta { get; set; }
+        Queue QueueOfSalad { get; set; }
 
         void QueueAdd(Item item);
     }
