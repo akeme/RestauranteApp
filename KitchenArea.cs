@@ -8,13 +8,13 @@ namespace RestauranteApp
 {
     public enum AreaResponsable
     {
-        Entradas,
-        Acompanhamentos, 
-        Sobremesas,
-        Bebidas,
+        Fries,
+        Garnish, 
+        Desert,
+        Drink,
         // considerando que o restaurante tenha diversos estilos de culinária
-        Carnes,
-        Massas, 
-       Saladas
+        Grill,
+        Pasta, 
+       Salad
     };
 }

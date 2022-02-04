@@ -8,49 +8,49 @@ namespace RestauranteApp
 {
     public class QueueOrganization : IQueueOrganization
     {
-        public Queue FilaDeEntradas { get; set; }
-        public Queue FilaDeAcompanhamentos { get; set; }
-        public Queue FilaDeSobremesas { get; set; }
-        public Queue FilaDeBebidas { get; set; }
-        public Queue FilaDeCarnes { get; set; }
-        public Queue FilaDeMassas { get; set; }
-        public Queue FilaDeSaladas { get; set; }
+        public Queue QueueOfFries { get; set; }
+        public Queue QueueOfGarnish { get; set; }
+        public Queue QueueOfDesert { get; set; }
+        public Queue QueueOfDrink { get; set; }
+        public Queue QueueOfGrill { get; set; }
+        public Queue QueueOfPasta { get; set; }
+        public Queue QueueOfSalad { get; set; }
 
         public void QueueManegement()
         {
-            FilaDeEntradas = new Queue("entradas");
-            FilaDeAcompanhamentos = new Queue("acompanhamentos");
-            FilaDeSobremesas = new Queue("sobremesas");
-            FilaDeBebidas = new Queue("bebidas");
-            FilaDeCarnes = new Queue("carnes");
-            FilaDeMassas = new Queue("massas");
-            FilaDeSaladas = new Queue("saladas");
+            QueueOfFries = new Queue("Fries");
+            QueueOfGarnish = new Queue("Garnish");
+            QueueOfDesert = new Queue("Desert");
+            QueueOfDrink = new Queue("Drink");
+            QueueOfGrill = new Queue("Grill");
+            QueueOfPasta = new Queue("Pasta");
+            QueueOfSalad = new Queue("Salad");
 
         }
         public void QueueAdd(Item item)
         {
             switch (item.Responsable)
             {
-                case AreaResponsable.Acompanhamentos:
-                    FilaDeAcompanhamentos.Itens.Add(item);
+                case AreaResponsable.Garnish:
+                    QueueOfGarnish.Itens.Add(item);
                     break;
-                case AreaResponsable.Entradas:
-                    FilaDeEntradas.Itens.Add(item);
+                case AreaResponsable.Fries:
+                    QueueOfFries.Itens.Add(item);
                     break;
-                case AreaResponsable.Bebidas:
-                    FilaDeBebidas.Itens.Add(item);
+                case AreaResponsable.Drink:
+                    QueueOfDrink.Itens.Add(item);
                     break;
-                case AreaResponsable.Carnes:
-                    FilaDeCarnes.Itens.Add(item);
+                case AreaResponsable.Grill:
+                    QueueOfGrill.Itens.Add(item);
                     break;
-                case AreaResponsable.Massas:
-                    FilaDeMassas.Itens.Add(item);
+                case AreaResponsable.Pasta:
+                    QueueOfPasta.Itens.Add(item);
                     break;
-                case AreaResponsable.Saladas:
-                    FilaDeSaladas.Itens.Add(item);
+                case AreaResponsable.Salad:
+                    QueueOfSalad.Itens.Add(item);
                     break;
-                case AreaResponsable.Sobremesas:
-                    FilaDeSobremesas.Itens.Add(item);
+                case AreaResponsable.Desert:
+                    QueueOfDesert.Itens.Add(item);
                     break;
                 default:
                     throw new NotImplementedException();

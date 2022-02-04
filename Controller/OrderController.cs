@@ -47,13 +47,13 @@ namespace RestauranteApp.Controller
             try
             {
                 var list = new List<Queue>();
-                list.Add(_queueOganization.FilaDeCarnes);
-                list.Add(_queueOganization.FilaDeSobremesas);
-                list.Add(_queueOganization.FilaDeBebidas);
-                list.Add(_queueOganization.FilaDeAcompanhamentos);
-                list.Add(_queueOganization.FilaDeEntradas);
-                list.Add(_queueOganization.FilaDeMassas);
-                list.Add(_queueOganization.FilaDeSaladas);
+                list.Add(_queueOganization.QueueOfGrill);
+                list.Add(_queueOganization.QueueOfDesert);
+                list.Add(_queueOganization.QueueOfDrink);
+                list.Add(_queueOganization.QueueOfGarnish);
+                list.Add(_queueOganization.QueueOfFries);
+                list.Add(_queueOganization.QueueOfPasta);
+                list.Add(_queueOganization.QueueOfSalad);
 
 
                 return Ok(list);
@@ -73,26 +73,26 @@ namespace RestauranteApp.Controller
             {
                 switch (name)
                 {
-                    case "saladas":
-                        return Ok(_queueOganization.FilaDeSaladas);
+                    case "Salad":
+                        return Ok(_queueOganization.QueueOfSalad);
 
-                    case "bebidas":
-                        return Ok(_queueOganization.FilaDeBebidas);
+                    case "Drink":
+                        return Ok(_queueOganization.QueueOfDrink);
 
-                    case "acompanhamentos":
-                        return Ok(_queueOganization.FilaDeAcompanhamentos);
+                    case "Garnish":
+                        return Ok(_queueOganization.QueueOfGarnish);
 
-                    case "sobremesas":
-                        return Ok(_queueOganization.FilaDeSobremesas);
+                    case "Desert":
+                        return Ok(_queueOganization.QueueOfDesert);
                     
-                    case "massas":
-                        return Ok(_queueOganization.FilaDeMassas);
+                    case "Pasta":
+                        return Ok(_queueOganization.QueueOfPasta);
                     
-                    case "carnes":
-                        return Ok(_queueOganization.FilaDeCarnes);
+                    case "Grill":
+                        return Ok(_queueOganization.QueueOfGrill);
                     
-                    case "entradas":
-                        return Ok(_queueOganization.FilaDeEntradas);         
+                    case "Fries":
+                        return Ok(_queueOganization.QueueOfFries);         
 
                     default:
                         return NotFound("Essa fila não existe!");
@@ -113,20 +113,20 @@ namespace RestauranteApp.Controller
             {
 
 
-                { "hamburger", new Item { Name = "Big Mac", Responsable = AreaResponsable.Carnes } },
-                { "fetuttine", new Item { Name = "Big Tasty", Responsable = AreaResponsable.Massas } },
-                { "guarana", new Item { Name = "Gurarana", Responsable = AreaResponsable.Bebidas } },
-                { "cocacola", new Item { Name = "Coca-Cola", Responsable = AreaResponsable.Bebidas } },
-                { "batata", new Item { Name = "Batata", Responsable = AreaResponsable.Acompanhamentos } },
-                { "sucodelaranja", new Item { Name = "Suco de Laranja", Responsable = AreaResponsable.Bebidas } },
-                { "nhoque", new Item { Name = "Nhoque", Responsable = AreaResponsable.Massas } },
-                { "saladacesar", new Item { Name = "Salada Cesar", Responsable = AreaResponsable.Saladas } },
-                { "saladatropical", new Item { Name = "Salada Tropical", Responsable = AreaResponsable.Saladas } },
-                { "contrafile", new Item { Name = "Contra Filé", Responsable = AreaResponsable.Carnes } },
-                { "nugget", new Item { Name = "Chicken Nugget", Responsable = AreaResponsable.Acompanhamentos } },
-                { "brownie", new Item { Name = "Tortinha", Responsable = AreaResponsable.Sobremesas } },
-                { "sorvete", new Item { Name = "Mc Flury", Responsable = AreaResponsable.Sobremesas } },
-                { "pudim", new Item { Name = "Mc Shake", Responsable = AreaResponsable.Sobremesas } }
+                { "hamburger", new Item { Name = "Big Mac", Responsable = AreaResponsable.Grill } },
+                { "fetuttine", new Item { Name = "Fetuttine", Responsable = AreaResponsable.Pasta } },
+                { "guarana", new Item { Name = "Gurarana", Responsable = AreaResponsable.Drink } },
+                { "cocacola", new Item { Name = "Coca-Cola", Responsable = AreaResponsable.Drink } },
+                { "batata", new Item { Name = "Batata", Responsable = AreaResponsable.Garnish } },
+                { "sucodelaranja", new Item { Name = "Suco de Laranja", Responsable = AreaResponsable.Drink } },
+                { "nhoque", new Item { Name = "Nhoque", Responsable = AreaResponsable.Pasta } },
+                { "saladacesar", new Item { Name = "Salada Cesar", Responsable = AreaResponsable.Salad } },
+                { "saladatropical", new Item { Name = "Salada Tropical", Responsable = AreaResponsable.Salad } },
+                { "contrafile", new Item { Name = "Contra Filé", Responsable = AreaResponsable.Grill } },
+                { "nugget", new Item { Name = "Chicken Nugget", Responsable = AreaResponsable.Garnish } },
+                { "brownie", new Item { Name = "Tortinha", Responsable = AreaResponsable.Desert } },
+                { "sorvete", new Item { Name = "Mc Flury", Responsable = AreaResponsable.Desert } },
+                { "pudim", new Item { Name = "Mc Shake", Responsable = AreaResponsable.Desert } }
             };
 
 
